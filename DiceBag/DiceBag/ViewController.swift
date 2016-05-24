@@ -57,18 +57,22 @@ class ViewController: UIViewController {
         
         diceBag = [d4Array, d6Array, d10Array, d20Array]
         
-        
-//        let collectionFLowLayout = UICollectionViewFlowLayout()
-//        collectionFLowLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0)
-//        collectionView.collectionViewLayout = collectionFLowLayout
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
 
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            collectionView.reloadData()
+        }
+    }
 
 }
 
@@ -93,13 +97,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.bounds.size.width = 60
         cell.bounds.size.height = 60
+        cell.layer.cornerRadius = 10.0
         
         let label = UILabel(frame: cell.bounds)
         label.text = String(die.roll())
         label.textAlignment = .Center
         label.textColor = UIColor.whiteColor()
         label.backgroundColor = die.color
-        label.layer.cornerRadius = 45.0
         
         cell.contentView.addSubview(label)
         
