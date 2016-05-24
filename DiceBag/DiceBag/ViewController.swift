@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
     // MARK: Properties
     
     var diceBag = [[Die]]()
@@ -60,5 +65,50 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return diceBag.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return diceBag[section].count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DiceCell", forIndexPath: indexPath)
+        
+        for subView in cell.contentView.subviews {
+            subView.removeFromSuperview()
+        }
+        
+        let die = diceBag[indexPath.section][indexPath.row]
+        
+        let label = UILabel(frame: cell.bounds)
+        label.text = String(die.roll())
+        label.textAlignment = .Center
+        label.textColor = UIColor.whiteColor()
+        label.backgroundColor = die.color
+        label.layer.cornerRadius = 45.0
+        
+        cell.contentView.addSubview(label)
+        
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        var reusableView: UICollectionReusableView?
+        
+        if kind == UICollectionElementKindSectionHeader {
+            let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as? DiceTypeCollectionReusableView
+            headerView?.headerTitle.text = "Section"
+            reusableView = headerView
+        }
+        
+        return reusableView!
+    }
+    
 }
 

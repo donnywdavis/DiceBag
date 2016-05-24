@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4120DC861CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4120DC851CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift */; };
 		41BC5C731CF4B4D400C4B9FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */; };
 		41BC5C751CF4B4D400C4B9FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC5C741CF4B4D400C4B9FC /* ViewController.swift */; };
 		41BC5C781CF4B4D400C4B9FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5C761CF4B4D400C4B9FC /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4120DC851CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceTypeCollectionReusableView.swift; sourceTree = "<group>"; };
 		41BC5C6F1CF4B4D400C4B9FC /* DiceBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BC5C741CF4B4D400C4B9FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */,
 				41BC5C741CF4B4D400C4B9FC /* ViewController.swift */,
+				4120DC851CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4120DC861CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift in Sources */,
 				41BC5C751CF4B4D400C4B9FC /* ViewController.swift in Sources */,
 				41BC5C891CF4B9F300C4B9FC /* Dice.swift in Sources */,
 				41BC5C731CF4B4D400C4B9FC /* AppDelegate.swift in Sources */,
@@ -325,6 +329,7 @@
 				41BC5C831CF4B4D400C4B9FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
