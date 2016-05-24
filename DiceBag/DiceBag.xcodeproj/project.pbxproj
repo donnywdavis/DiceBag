@@ -54,14 +54,38 @@
 		41BC5C711CF4B4D400C4B9FC /* DiceBag */ = {
 			isa = PBXGroup;
 			children = (
-				41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */,
-				41BC5C741CF4B4D400C4B9FC /* ViewController.swift */,
-				41BC5C761CF4B4D400C4B9FC /* Main.storyboard */,
-				41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */,
-				41BC5C7B1CF4B4D400C4B9FC /* LaunchScreen.storyboard */,
-				41BC5C7E1CF4B4D400C4B9FC /* Info.plist */,
+				41BC5C851CF4B5F700C4B9FC /* Controllers */,
+				41BC5C841CF4B5F000C4B9FC /* Views */,
+				41BC5C861CF4B5FE00C4B9FC /* Supporting Files */,
 			);
 			path = DiceBag;
+			sourceTree = "<group>";
+		};
+		41BC5C841CF4B5F000C4B9FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5C761CF4B4D400C4B9FC /* Main.storyboard */,
+				41BC5C7B1CF4B4D400C4B9FC /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		41BC5C851CF4B5F700C4B9FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */,
+				41BC5C741CF4B4D400C4B9FC /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		41BC5C861CF4B5FE00C4B9FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */,
+				41BC5C7E1CF4B4D400C4B9FC /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
