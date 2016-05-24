@@ -57,6 +57,11 @@ class ViewController: UIViewController {
         
         diceBag = [d4Array, d6Array, d10Array, d20Array]
         
+        
+//        let collectionFLowLayout = UICollectionViewFlowLayout()
+//        collectionFLowLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0)
+//        collectionView.collectionViewLayout = collectionFLowLayout
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,6 +91,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         let die = diceBag[indexPath.section][indexPath.row]
         
+        cell.bounds.size.width = 60
+        cell.bounds.size.height = 60
+        
         let label = UILabel(frame: cell.bounds)
         label.text = String(die.roll())
         label.textAlignment = .Center
@@ -103,7 +111,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if kind == UICollectionElementKindSectionHeader {
             let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as? DiceTypeCollectionReusableView
-            headerView?.headerTitle.text = "Section"
+            let die = diceBag[indexPath.section][indexPath.row]
+            headerView?.headerTitle.text = String(die.type)
             reusableView = headerView
         }
         
