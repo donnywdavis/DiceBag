@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
     let numberOfD6 = 6
     let numberOfD10 = 3
     let numberOfD20 = 5
+    var audioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +72,15 @@ class ViewController: UIViewController {
 
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if motion == .MotionShake {
+            if let audioFilePath = NSBundle.mainBundle().pathForResource("dice-roll", ofType: "mp3") {
+                let audioURL = NSURL(fileURLWithPath: audioFilePath)
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOfURL: audioURL)
+                    audioPlayer.play()
+                } catch {
+                    print("Not able to play audio")
+                }
+            }
             collectionView.reloadData()
         }
     }

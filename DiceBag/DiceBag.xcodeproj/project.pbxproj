@@ -14,6 +14,7 @@
 		41BC5C7A1CF4B4D400C4B9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */; };
 		41BC5C7D1CF4B4D400C4B9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5C7B1CF4B4D400C4B9FC /* LaunchScreen.storyboard */; };
 		41BC5C891CF4B9F300C4B9FC /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC5C881CF4B9F300C4B9FC /* Dice.swift */; };
+		41C479F81CF5329D004D590D /* dice-roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 41C479F71CF5329D004D590D /* dice-roll.mp3 */; };
 		5AD37691CE86862A25B4124C /* Pods_DiceBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CD7C8B05C06E3702ABBDCB /* Pods_DiceBag.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		41BC5C7C1CF4B4D400C4B9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41BC5C7E1CF4B4D400C4B9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41BC5C881CF4B9F300C4B9FC /* Dice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		41C479F71CF5329D004D590D /* dice-roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dice-roll.mp3"; sourceTree = "<group>"; };
 		9843F6C3663287E9026B67D5 /* Pods-DiceBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag.release.xcconfig"; sourceTree = "<group>"; };
 		EC9F426F9EB0728614EA579A /* Pods-DiceBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 		41BC5C861CF4B5FE00C4B9FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41C479F71CF5329D004D590D /* dice-roll.mp3 */,
 				41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */,
 				41BC5C7E1CF4B4D400C4B9FC /* Info.plist */,
 			);
@@ -190,6 +193,7 @@
 			files = (
 				41BC5C7D1CF4B4D400C4B9FC /* LaunchScreen.storyboard in Resources */,
 				41BC5C7A1CF4B4D400C4B9FC /* Assets.xcassets in Resources */,
+				41C479F81CF5329D004D590D /* dice-roll.mp3 in Resources */,
 				41BC5C781CF4B4D400C4B9FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +372,7 @@
 			baseConfigurationReference = EC9F426F9EB0728614EA579A /* Pods-DiceBag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiceBag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.donnywdavis.DiceBag;
@@ -380,6 +385,8 @@
 			baseConfigurationReference = 9843F6C3663287E9026B67D5 /* Pods-DiceBag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Donald DAVIS (4B3L94BG4K)";
 				INFOPLIST_FILE = DiceBag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.donnywdavis.DiceBag;
