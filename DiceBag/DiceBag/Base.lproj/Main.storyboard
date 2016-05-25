@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,14 +48,28 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MxG-Km-QrP">
+                                            <rect key="frame" x="543" y="9" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXb-SH-Gpx">
+                                            <rect key="frame" x="498" y="15" width="37" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.75294117650000003" green="0.75686274509999996" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="MxG-Km-QrP" firstAttribute="trailing" secondItem="KQ4-9j-gE4" secondAttribute="trailingMargin" id="3Dx-2p-VjW"/>
+                                        <constraint firstItem="MxG-Km-QrP" firstAttribute="centerY" secondItem="KQ4-9j-gE4" secondAttribute="centerY" id="5gt-Kg-f1z"/>
+                                        <constraint firstItem="MxG-Km-QrP" firstAttribute="leading" secondItem="fXb-SH-Gpx" secondAttribute="trailing" constant="8" id="ENx-0D-GA5"/>
                                         <constraint firstItem="pBF-9j-eof" firstAttribute="centerX" secondItem="KQ4-9j-gE4" secondAttribute="centerX" id="IsR-1V-IfV"/>
                                         <constraint firstItem="pBF-9j-eof" firstAttribute="centerY" secondItem="KQ4-9j-gE4" secondAttribute="centerY" id="VL5-Bw-arU"/>
+                                        <constraint firstItem="fXb-SH-Gpx" firstAttribute="centerY" secondItem="KQ4-9j-gE4" secondAttribute="centerY" id="df4-co-XiU"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerTitle" destination="pBF-9j-eof" id="ZN0-sk-TIq"/>
+                                        <outlet property="lockDiceSwitch" destination="MxG-Km-QrP" id="Cw7-8n-lBr"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>

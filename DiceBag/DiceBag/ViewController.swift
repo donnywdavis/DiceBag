@@ -35,25 +35,25 @@ class ViewController: UIViewController {
         // Create our dice bag
         var index = 0
         while index < numberOfD4 {
-            d4Array.append(Die(type: DiceType.D4))
+            d4Array.append(Die(type: DiceType.D4, currentValue: 0, locked: false))
             index += 1
         }
         
         index = 0
         while index < numberOfD6 {
-            d6Array.append(Die(type: DiceType.D6))
+            d6Array.append(Die(type: DiceType.D6, currentValue: 0, locked: false))
             index += 1
         }
         
         index = 0
         while index < numberOfD10 {
-            d10Array.append(Die(type: DiceType.D10))
+            d10Array.append(Die(type: DiceType.D10, currentValue: 0, locked: false))
             index += 1
         }
         
         index = 0
         while index < numberOfD20 {
-            d20Array.append(Die(type: DiceType.D20))
+            d20Array.append(Die(type: DiceType.D20, currentValue: 0, locked: false))
             index += 1
         }
         
@@ -104,14 +104,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             subView.removeFromSuperview()
         }
         
-        let die = diceBag[indexPath.section][indexPath.row]
+        var die = diceBag[indexPath.section][indexPath.row]
         
         cell.bounds.size.width = 60
         cell.bounds.size.height = 60
         cell.layer.cornerRadius = 10.0
         
         let label = UILabel(frame: cell.bounds)
-        label.text = String(die.roll())
+        if !die.locked {
+            die.currentValue = die.roll()
+            diceBag[indexPath.section][indexPath.row] = die
+        }
+        label.text = String(die.currentValue)
         label.textAlignment = .Center
         label.textColor = UIColor.whiteColor()
         label.backgroundColor = die.color
@@ -126,8 +130,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if kind == UICollectionElementKindSectionHeader {
             let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as? DiceTypeCollectionReusableView
-            let die = diceBag[indexPath.section][indexPath.row]
-            headerView?.headerTitle.text = String(die.type)
+            let diceType = diceBag[indexPath.section][indexPath.row]
+            headerView?.headerTitle.text = String(diceType.type)
+            for index in 0...diceBag[indexPath.section].count-1 {
+                var die = diceBag[indexPath.section][index]
+                die.locked = (headerView?.lockDiceSwitch.on)!
+                diceBag[indexPath.section][index] = die
+            }
             reusableView = headerView
         }
         
