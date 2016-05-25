@@ -1,6 +1,0 @@
-framework module Pods_DiceBag {
-  umbrella header "Pods-DiceBag-umbrella.h"
-
-  export *
-  module * { export * }
-}

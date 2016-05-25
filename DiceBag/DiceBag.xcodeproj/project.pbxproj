@@ -14,9 +14,12 @@
 		41BC5C7A1CF4B4D400C4B9FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */; };
 		41BC5C7D1CF4B4D400C4B9FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC5C7B1CF4B4D400C4B9FC /* LaunchScreen.storyboard */; };
 		41BC5C891CF4B9F300C4B9FC /* Dice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC5C881CF4B9F300C4B9FC /* Dice.swift */; };
+		41C479F81CF5329D004D590D /* dice-roll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 41C479F71CF5329D004D590D /* dice-roll.mp3 */; };
+		5AD37691CE86862A25B4124C /* Pods_DiceBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08CD7C8B05C06E3702ABBDCB /* Pods_DiceBag.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08CD7C8B05C06E3702ABBDCB /* Pods_DiceBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiceBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4120DC851CF4DBDF00AC4B4B /* DiceTypeCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceTypeCollectionReusableView.swift; sourceTree = "<group>"; };
 		41BC5C6F1CF4B4D400C4B9FC /* DiceBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BC5C721CF4B4D400C4B9FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		41BC5C7C1CF4B4D400C4B9FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41BC5C7E1CF4B4D400C4B9FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41BC5C881CF4B9F300C4B9FC /* Dice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dice.swift; sourceTree = "<group>"; };
+		41C479F71CF5329D004D590D /* dice-roll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dice-roll.mp3"; sourceTree = "<group>"; };
+		9843F6C3663287E9026B67D5 /* Pods-DiceBag.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceBag.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag.release.xcconfig"; sourceTree = "<group>"; };
+		EC9F426F9EB0728614EA579A /* Pods-DiceBag.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiceBag.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD37691CE86862A25B4124C /* Pods_DiceBag.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26D2FC20892F96F4062BC1B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08CD7C8B05C06E3702ABBDCB /* Pods_DiceBag.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41BC5C661CF4B4D400C4B9FC = {
 			isa = PBXGroup;
 			children = (
 				41BC5C711CF4B4D400C4B9FC /* DiceBag */,
 				41BC5C701CF4B4D400C4B9FC /* Products */,
+				66C8D7D8F69D3D9799A17BC1 /* Pods */,
+				26D2FC20892F96F4062BC1B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +105,7 @@
 		41BC5C861CF4B5FE00C4B9FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41C479F71CF5329D004D590D /* dice-roll.mp3 */,
 				41BC5C791CF4B4D400C4B9FC /* Assets.xcassets */,
 				41BC5C7E1CF4B4D400C4B9FC /* Info.plist */,
 			);
@@ -102,6 +120,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		66C8D7D8F69D3D9799A17BC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC9F426F9EB0728614EA579A /* Pods-DiceBag.debug.xcconfig */,
+				9843F6C3663287E9026B67D5 /* Pods-DiceBag.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41BC5C811CF4B4D400C4B9FC /* Build configuration list for PBXNativeTarget "DiceBag" */;
 			buildPhases = (
+				FE13845005285A097065D604 /* 📦 Check Pods Manifest.lock */,
 				41BC5C6B1CF4B4D400C4B9FC /* Sources */,
 				41BC5C6C1CF4B4D400C4B9FC /* Frameworks */,
 				41BC5C6D1CF4B4D400C4B9FC /* Resources */,
+				9990957C11A6BB437E4FEA8E /* 📦 Embed Pods Frameworks */,
+				E20DE47A2B6D4933456A3E6E /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,11 +193,60 @@
 			files = (
 				41BC5C7D1CF4B4D400C4B9FC /* LaunchScreen.storyboard in Resources */,
 				41BC5C7A1CF4B4D400C4B9FC /* Assets.xcassets in Resources */,
+				41C479F81CF5329D004D590D /* dice-roll.mp3 in Resources */,
 				41BC5C781CF4B4D400C4B9FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9990957C11A6BB437E4FEA8E /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E20DE47A2B6D4933456A3E6E /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiceBag/Pods-DiceBag-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE13845005285A097065D604 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41BC5C6B1CF4B4D400C4B9FC /* Sources */ = {
@@ -290,8 +369,10 @@
 		};
 		41BC5C821CF4B4D400C4B9FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC9F426F9EB0728614EA579A /* Pods-DiceBag.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DiceBag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.donnywdavis.DiceBag;
@@ -301,8 +382,11 @@
 		};
 		41BC5C831CF4B4D400C4B9FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9843F6C3663287E9026B67D5 /* Pods-DiceBag.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Donald DAVIS (4B3L94BG4K)";
 				INFOPLIST_FILE = DiceBag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.donnywdavis.DiceBag;

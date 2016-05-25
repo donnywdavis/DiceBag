@@ -49,9 +49,11 @@ struct Die {
     var color: UIColor {
         return type.diceColor
     }
-    
+    var currentValue = 0
+    var locked = false
     
     func roll() -> Int {
         return faceValues[Int(arc4random_uniform(UInt32(faceValues.count)))]
     }
+
 }

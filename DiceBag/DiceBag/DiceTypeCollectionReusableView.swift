@@ -13,5 +13,6 @@ class DiceTypeCollectionReusableView: UICollectionReusableView {
     // MARK: IBOutlets
     
     @IBOutlet weak var headerTitle: UILabel!
+    @IBOutlet weak var lockDiceSwitch: UISwitch!
         
 }
